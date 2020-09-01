@@ -15,5 +15,17 @@
                 </ul>
             </a>
         {% endfor %}
+        {% for object in restaurants %}
+    <ul>
+        <li>
+            <h1>{{restaurant.name}}</h1>
+        </li>
+        <li>
+            <a href="{% url 'restaurant-delete' restaurant_id=object.id %}">Delete</a>
+        </li>
+    </ul><br>
+      {% endfor %}
+
     </body>
+
 </html>
